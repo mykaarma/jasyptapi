@@ -1,5 +1,6 @@
 # jasyptapi
-A wrapper API around jasypt to to easily encrypt/decrypt your sensitive data
+A wrapper API around jasypt to to easily encrypt/decrypt your sensitive data.
+This project is publicly hosted at https://mkbot.mykaarma.com/jasyptapi/ .
 
 ## Deployment and setup
 ### Using Maven
