@@ -178,6 +178,15 @@ function submit() {
 	}
 }
 
+function clearOnFirstClick(inputField) {
+    if(!inputField.clickCount || inputField.clickCount == 0) {
+        inputField.value = '';
+        inputField.clickCount = 1
+    } else {
+        inputField.clickCount += 1
+    }
+}
+
 
 // Copied from: https://stackoverflow.com/a/30832210
 // Function to download data to a file
@@ -197,4 +206,13 @@ function downloadFile(data, filename, type) {
             window.URL.revokeObjectURL(url);  
         }, 0); 
     }
+}
+
+function generateRandomPassword(length) {
+    // 4 b64 chars = 3 bytes, This will generate chars in  multiples of 4, we'll take a substring later
+    var arr = new Uint8Array(3 * Math.ceil(length/4))
+    window.crypto.getRandomValues(arr)
+    let pass = btoa(String.fromCharCode(...arr)).substring(0, length)
+    document.getElementById("password").value = pass
+    console.log(pass)
 }
