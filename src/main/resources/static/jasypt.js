@@ -179,11 +179,9 @@ function submit() {
 }
 
 function clearOnFirstClick(inputField) {
-    if(!inputField.clickCount || inputField.clickCount == 0) {
+    if(!inputField.clickedOnce) {
         inputField.value = '';
-        inputField.clickCount = 1
-    } else {
-        inputField.clickCount += 1
+        inputField.clickedOnce = true
     }
 }
 
