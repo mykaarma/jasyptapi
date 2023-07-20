@@ -30,7 +30,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("Jasypt Wrapper API").description("You can use this API to easily encrypt/decrypt your sensitive data "
         		+ "using jasypt. This API does NOT store any data.")
-                .contact(new Contact("Prakash Tiwari", "https://github.com/prakashiit",
+                .contact(new Contact("Prakash Tiwari", "https://github.com/prakash-42",
                         "prakash.tiwari@mykaarma.com")).version("1.0").build();
     }
 
